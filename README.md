@@ -22,7 +22,7 @@ Each implementation demonstrates how processes can coordinate access to shared r
 
     Clone the repository:
 
-git clone https://github.com/your-username/your-repo-name.git
+git clone https://github.com/Adnane-Dbz/Process_Mutual_Exclusion_-_Synchronization-.git
 
 Compile the C programs:
 
