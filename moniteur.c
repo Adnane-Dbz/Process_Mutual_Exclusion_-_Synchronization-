@@ -91,3 +91,29 @@ void *consommateur(void *arg) {
 }
 
 
+int main() {
+    pthread_t prod, cons;
+
+    monitor_init(&moniteur);
+    condition_init(&cond_prod);
+    condition_init(&cond_cons);
+
+    pthread_create(&prod, NULL, producteur, NULL);
+    pthread_create(&cons, NULL, consommateur, NULL);
+    
+    pthread_join(prod, NULL);
+    pthread_join(cons, NULL);
+
+
+
+
+    condition_destroy(&cond_prod);
+    condition_destroy(&cond_cons);
+
+
+
+
+
+    
+    return 0;
+}
